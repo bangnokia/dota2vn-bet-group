@@ -1,0 +1,13 @@
+[post]
+id
+name
+content
+time_post
+hit
+
+//table lists
+date
+title
+tag
+hit
+risk

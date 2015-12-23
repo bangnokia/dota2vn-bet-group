@@ -1,0 +1,7 @@
+RewriteEngine on
+
+RewriteRule ^stream$ stream.php [L]
+RewriteRule ^detail/([a-zA-Z0-9_-]+)$ post.php?slug=$1 [NC,L]
+RewriteRule ^tag/([a-zA-Z0-9_-]+)$ tag.php?slug=$1 [NC,L]
+RewriteRule ^author/([a-zA-Z0-9_-]+)$ author.php?slug=$1 [NC,L]
+RewriteRule ^([a-zA-Z0-9_-]+)$ category.php?slug=$1 [NC,L]

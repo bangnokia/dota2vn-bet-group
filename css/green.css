@@ -1,0 +1,22 @@
+body{
+background:#000000 url(/img/bg.gif);
+color:#008000;
+}
+.content{background:#000; border:1px solid #008000;}
+
+
+::-webkit-input-placeholder {
+   color: #008000;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #008000;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #008000;  
+}
+
+:-ms-input-placeholder {  
+   color: #008000;  
+}
