@@ -10,22 +10,28 @@
 
 <h3 id='stream-title'>null =))</h3>
 <div class="spacer"></div>
-<div id='stream-screen'>
-	<iframe scrolling='no' src='http://talktv.vn/streaming/play/embed/pewpewvn' height='400' width='650'></iframe>
-	<iframe scrolling='no' src='http://talktv.vn/streaming/chat/embed/pewpewvn' height='400' width='345'></iframe>
 
-	<div class="stream-action"><button>close chat</button></div>
+</div> <!--/close content div-->
+<div id='stream-screen'>
+	<iframe id='stream-watch' scrolling='no' src='http://talktv.vn/streaming/play/embed/pewpewvn' height='400' width='650'></iframe>
+	<iframe id='stream-chat' scrolling='no' src='http://talktv.vn/streaming/chat/embed/pewpewvn' height='400' width='345'></iframe>	
 </div>
 
-<!-- table streaming -->
+<!--/reopen contetn div-->
+<div class="content">
+<div class="spacer"></div>
+<div class="stream-action"><button class='button btnHideChat'>hide chat</button></div>
+
+
 <div class="cold-half" style="width: 75%;">
+	<!-- table streaming -->
 	<h4 class="YellowText">-::list stream</h4>
 	<table id='stream-table' class='table-stream'>
 		<tr data-stream-channel='talktv' data-stream-id='lzstudio'>
 			<td class="order" id='order-lsztudio'>1</td>
 			<td id='name-lzstudio'><img src='/img/talktv.png' /> lzstudio</td>
 			<td id='title-lzstudio'></td>
-			<td id='status-lzstudio'>asdasd</td>
+			<td id='status-lzstudio'></td>
 			<td id='view-lzstudio'></td>
 		</tr>
 		<tr data-stream-channel='talktv' data-stream-id='pewpewvn'>
@@ -45,11 +51,33 @@
 		<tr data-stream-channel='youtube' data-stream-id='5QmuoNfge9Y'>
 			<td class="order" id='order-5QmuoNfge9Y'>3</td>
 			<td id='name-5QmuoNfge9Y'><img src='/img/youtube.png' /> esv tv</td>
-			<td id='title-5QmuoNfge9Y'>working</td>
+			<td id='title-5QmuoNfge9Y'></td>
 			<td id='status-5QmuoNfge9Y'></td>
 			<td id='view-5QmuoNfge9Y'></td>
 		</tr>
+		<tr data-stream-channel='twitch' data-stream-id='beyondthesummit'>
+			<td class="order" id='order-beyondthesummit'>4</td>
+			<td id='name-beyondthesummit'><img src='/img/twitch.png' /> beyondthesummit</td>
+			<td id='title-beyondthesummit'></td>
+			<td id='status-beyondthesummit'></td>
+			<td id='view-beyondthesummit'></td>
+		</tr>
+		<tr data-stream-channel='twitch' data-stream-id='dendi'>
+			<td class="order" id='order-dendi'>4</td>
+			<td id='name-dendi'><img src='/img/twitch.png' /> den<strong class='RedText'>dick</strong></td>
+			<td id='title-dendi'></td>
+			<td id='status-dendi'></td>
+			<td id='view-dendi'></td>
+		</tr>
 	</table>
+	<!-- end table streaming -->
+	
+	<!-- multi stream -->
+	<h4>extra multi stream in 1 screen (up to unlimited) 1 link 1 line: </h4>
+	<form action="/multistream" target="_blank" method="post">
+		<textarea class='multistream-list' name="MultiStreamLinks" id="" cols="30" rows="10" placeholder='<iframe scrolling="no" src="http://talktv.vn/streaming/play/embed/daudau" height="376" width="622"></iframe>'></textarea>
+		<button class="button" type="submit">enjoy</button>
+	</form>
 </div>
 
 <!-- table schedule -->
@@ -71,8 +99,6 @@
 
 <div class="clear"></div>
 
-<h4>extra multi streaming: </h4><span>coming soon</span>
-<div class="clear"></div>
 
 
 <!-- dit me choi full js luon, ke me cac ong =)) -->

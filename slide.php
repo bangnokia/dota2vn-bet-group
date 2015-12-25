@@ -1,4 +1,4 @@
-﻿<div class='slider'>
+<div class='slider'>
 	<div class='slider_container' id='slidesContainer'>
 		<div class='slide'>
 			<div class='slider_title'>

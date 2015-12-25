@@ -49,6 +49,7 @@
 		[ <a href='/'>home</a> ]&nbsp;&nbsp;
 		[ <a href='/faq' class=''>faq</a> ]&nbsp;&nbsp;
 		[ <a href='/stream' class='WhiteText stream-icon'>streaming</a> ]&nbsp;&nbsp;
+		[ <a href='' class='RedText' onclick='window.location="http://lmht.vn/download/"; return false;'> download dota2 + hack map</a> ]&nbsp;&nbsp;
 		[ <a href='/donate' class='YellowTextGold'> donate</a> ]&nbsp;&nbsp;
 		
 		<!--float right-->
@@ -81,9 +82,9 @@
 	</div><div class='content'>
 		<div class='head_auth'>
 				<div class='menu_icon'><img src='/img/lock.png'></a></div> 
-				[ <a href='/auth' class='RedText'>authorization</a> ] 
-				[ <a href='/reg' class='RedText'>registration</a> ] 
-				[ <a href='/restore' class='RedText'>restore account</a> ] 
+				[ <a href='/auth' class='RedText' onclick="alert('coming soon'); return false;">authorization</a> ] 
+				[ <a href='/reg' class='RedText' onclick="alert('coming soon'); return false;">registration</a> ] 
+				[ <a href='/restore' class='RedText' onclick="alert('coming soon'); return false;">restore account</a> ] 
 			</div>
 			<div class='head_contacts RedText'>
 				<a href='#contacts_popup' class='popup'>

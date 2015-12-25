@@ -10,7 +10,7 @@ $(document).ready(function() {
 		console.log(channel);
 
 		$.ajax({
-			url : '/streamstatus.php',
+			url : '/streamcore.php',
 			data : {
 				'channel' : channel,
 				'id' : id
@@ -42,16 +42,30 @@ $(document).ready(function() {
 		streamTitle += ' - ' + $('#name-'+streamId).html();
 
 		if (streamChannel == 'talktv') {
-			streamUrl = "<iframe scrolling='no' src='http://talktv.vn/streaming/play/embed/"+streamId+"' height='400' width='650'></iframe>"
-						+"<iframe scrolling='no' src='http://talktv.vn/streaming/chat/embed/"+streamId+"' height='400' width='340'></iframe>";
+			streamUrl = "<iframe id='stream-watch' scrolling='no' src='http://talktv.vn/streaming/play/embed/"+streamId+"' height='400' width='660'></iframe>"
+						+"<iframe id='stream-chat' scrolling='no' src='http://talktv.vn/streaming/chat/embed/"+streamId+"' height='400' width='357'></iframe>";
 		}
 		else if (streamChannel == 'youtube') {
-			streamUrl = "<iframe width='1000' height='500' src='https://www.youtube.com/embed/"+streamId+"?ps=gaming&autoplay=1' frameborder='0' allowfullscreen></iframe>";
+			streamUrl = "<iframe id='stream-watch' width='1022' height='574' src='https://www.youtube.com/embed/"+streamId+"?ps=gaming&autoplay=1' frameborder='0' allowfullscreen></iframe>";
 						// +"<iframe src='https://www.youtube.com/live_chat?is_popout=1&v="+streamId+"' frameborder='0' height='400' width='340'></iframe>";
 		}
+		else if (streamChannel == 'twitch') {
+			streamUrl = "<iframe id='stream-watch' scrolling='no' src='http://player.twitch.tv/?channel="+streamId+"' height='394' width='660'></iframe>"
+						+"<iframe id='stream-chat' scrolling='no' src='http://www.twitch.tv/"+streamId+"/chat?popout=' height='394' width='357'></iframe>";
+		}
+
 		console.log(streamUrl);
 		$('#stream-title').hide().html(streamTitle).fadeIn('slow');
 		streamScreen.hide().html(streamUrl).fadeIn('slow');
 	});
 	// end this shit
+
+	//close chat frame 
+	$('.stream-action').on('click', '.btnHideChat', function() {
+		$('#stream-chat').hide();
+		$('#stream-watch').animate({
+			'height' : '574px',
+			'width' : '1022px'
+		}, 300);
+	});
 })

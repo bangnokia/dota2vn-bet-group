@@ -9,6 +9,7 @@ body{
 color:#008000;
 font-family:Verdana;
 font-size:10px;
+margin: 0;
 scrollbar-highlight-color:#008000; scrollbar-shadow-color:#008000; scrollbar-3dlight-color:#000000; scrollbar-arrow-color:#000000; scrollbar-track-color:#000000; scrollbar-darkshadow-color:#000000; scrollbar-face-color:#000000;
 
 }
@@ -841,7 +842,7 @@ P STRONG{line-height:14px;}
 	
 	.powered{position:absolute; bottom:0px; left:0px; line-height:32px;}
 	.powered img{float:left;}
-.tag a {color: #fff;}
+.tag a {color: #fff !important;}
 .post-content {
 	padding: 5px;
 	font-weight: normal;
@@ -917,6 +918,21 @@ iframe {
     background: url(/img/stream.png) 0px 0px no-repeat;
     padding-left: 20px;
 }
+.multistream-list {
+	width: 99%;
+	border: 0px;
+	resize: none;
+}
+#stream-screen {
+	position: relative;
+	margin: -1px 0px -1px 0px;
+	text-align: center;
+	padding: 0;
+	background-color: #000;
+	width: 100%;
+	z-index: 9999;
+}
+
 /*
 .buttonbuy { width:120px; font-size:14px; font-weight:bold; text-align:center; border-radius:3px; color:#fff; text-shadow:1px 1px 0px #000; cursor:pointer;
 				padding:10px; border-top: 1px solid #6ec97a; border-left: 1px solid #6ec97a; border-bottom: 1px solid #6ec97a; border-right: 1px solid #6ec97a; background: #008600;

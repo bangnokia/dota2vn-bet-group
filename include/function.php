@@ -13,7 +13,7 @@
 				<div class='td<?php if($post['categories'][0]['slug'] == 'drama') echo ' RedText'; ?>'>
 					<h3><a href='/detail/<?=$post['slug']?>'><?=$post['title']?></a></h3>
 				</div>
-				<div class='td'>6969</div>
+				<div class='td hit'>6969</div>
 				<div class='td'>
 					<?php
 						foreach ($post['tags'] as $tag) { ?>

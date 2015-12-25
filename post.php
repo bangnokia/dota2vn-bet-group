@@ -1,5 +1,6 @@
 <?php
     include ('include/function.php');
+    include 'include/config.php';
     $slug = $_GET['slug'];
     $content = file_get_contents($api_url.'/get_post/?slug='.$slug);
     if ($content == FALSE) notfound();
